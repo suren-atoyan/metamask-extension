@@ -33,7 +33,9 @@
     "disc": "gulp disc --debug",
     "announce": "node development/announcer.js",
     "generateNotice": "node notices/notice-generator.js",
-    "deleteNotice": "node notices/notice-delete.js"
+    "deleteNotice": "node notices/notice-delete.js",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "browserify": {
     "transform": [
@@ -155,7 +157,8 @@
     "web3": "^0.20.1",
     "web3-provider-engine": "^13.4.0",
     "web3-stream-provider": "^3.0.1",
-    "xtend": "^4.0.1"
+    "xtend": "^4.0.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
@@ -222,5 +225,6 @@
   },
   "engines": {
     "node": ">=0.8.0"
-  }
+  },
+  "snyk": true
 }
